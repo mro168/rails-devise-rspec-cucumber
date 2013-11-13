@@ -35,5 +35,8 @@ module RailsDeviseRspecCucumber
       g.javascripts false
       g.helper false
     end
+    
+    # don't log password
+    config.filter_parameters += [:password, :password_confirmation]
   end
 end
